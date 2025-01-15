@@ -60,12 +60,9 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee{" +
-				"employeeId=" + employeeId +
-				", employeeName='" + employeeName + '\'' +
-				", email='" + email + '\'' +
-				", salary=" + salary +
-				// Avoid printing the projects to prevent circular reference
-				'}';
+		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", email=" + email
+				+ ", salary=" + salary + ", ]";
 	}
+
+	
 }

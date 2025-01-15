@@ -7,6 +7,7 @@
     
     <!-- Bean Definition -->
     
+    <!-- Employee bean definition -->
     <bean id="employee1" class="com.jsp.springcore.employee_project.entity.Employee" autowire="byType">
     	<property name="employeeId" value="101"></property>
     	<property name="employeeName" value="Vivek"></property>
@@ -35,7 +36,7 @@
     	<property name="salary" value="150000"></property>
     </bean> 
     
-    
+    <!-- project bean definition -->
     <bean id="project1" class="com.jsp.springcore.employee_project.entity.Project" autowire="no">
     	<property name="projectId" value="1"></property>
     	<property name="projectName" value="Zomato"></property>
@@ -56,8 +57,8 @@
     	
     	<property name="employees">
     		<list>
-    			<ref bean="employee1"/>
-    			<ref bean="employee2"/>
+    			<ref bean="employee3"/>
+    			<ref bean="employee4"/>
     		</list>
     	</property>
     </bean> 
@@ -70,7 +71,7 @@
     	<property name="employees">
     		<list>
     			<ref bean="employee1"/>
-    			<ref bean="employee2"/>
+    			<ref bean="employee3"/>
     		</list>
     	</property>
     </bean> 
@@ -82,8 +83,8 @@
     	
     	<property name="employees">
     		<list>
-    			<ref bean="employee1"/>
     			<ref bean="employee2"/>
+    			<ref bean="employee4"/>
     		</list>
     	</property>
     </bean> 

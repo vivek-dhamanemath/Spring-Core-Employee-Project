@@ -51,11 +51,9 @@ public class Project {
 
 	@Override
 	public String toString() {
-		return "Project{" +
-				"projectId=" + projectId +
-				", projectName='" + projectName + '\'' +
-				", techStack='" + techStack + '\'' +
-				// Avoid printing the employees to prevent circular reference
-				'}';
+		return "Project [projectId=" + projectId + ", projectName=" + projectName + ", techStack=" + techStack
+				+ ", employees=" + employees + "]";
 	}
+
+	
 }
