@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- Bean Definition -->
+    
+    <bean id="employee1" class="com.jsp.springcore.employee_project.entity.Employee" autowire="byType">
+    	<property name="employeeId" value="101"></property>
+    	<property name="employeeName" value="Vivek"></property>
+    	<property name="email" value="vivek@gmail.com"></property>
+    	<property name="salary" value="550000"></property>
+    </bean>
+    
+    <bean id="employee2" class="com.jsp.springcore.employee_project.entity.Employee" autowire="byType">
+    	<property name="employeeId" value="102"></property>
+    	<property name="employeeName" value="Vinay"></property>
+    	<property name="email" value="vinay@gmail.com"></property>
+    	<property name="salary" value="850000"></property>
+    </bean>
+    
+    <bean id="employee3" class="com.jsp.springcore.employee_project.entity.Employee" autowire="byType">
+    	<property name="employeeId" value="103"></property>
+    	<property name="employeeName" value="Vijay"></property>
+    	<property name="email" value="vijay@gmail.com"></property>
+    	<property name="salary" value="950000"></property>
+    </bean>
+    
+    <bean id="employee4" class="com.jsp.springcore.employee_project.entity.Employee" autowire="byType">
+    	<property name="employeeId" value="104"></property>
+    	<property name="employeeName" value="Vikas"></property>
+    	<property name="email" value="vikas@gmail.com"></property>
+    	<property name="salary" value="150000"></property>
+    </bean> 
+    
+    
+    <bean id="project1" class="com.jsp.springcore.employee_project.entity.Project" autowire="no">
+    	<property name="projectId" value="1"></property>
+    	<property name="projectName" value="Zomato"></property>
+    	<property name="techStack" value="JAVA"></property>
+    	
+    	<property name="employees">
+    		<list>
+    			<ref bean="employee1"/>
+    			<ref bean="employee2"/>
+    		</list>
+    	</property>
+    </bean> 
+    
+    <bean id="project2" class="com.jsp.springcore.employee_project.entity.Project" autowire="no">
+    	<property name="projectId" value="2"></property>
+    	<property name="projectName" value="Swigy"></property>
+    	<property name="techStack" value="Python"></property>
+    	
+    	<property name="employees">
+    		<list>
+    			<ref bean="employee1"/>
+    			<ref bean="employee2"/>
+    		</list>
+    	</property>
+    </bean> 
+    
+    <bean id="project3" class="com.jsp.springcore.employee_project.entity.Project" autowire="no">
+    	<property name="projectId" value="3"></property>
+    	<property name="projectName" value="Rapido"></property>
+    	<property name="techStack" value="C++"></property>
+    	
+    	<property name="employees">
+    		<list>
+    			<ref bean="employee1"/>
+    			<ref bean="employee2"/>
+    		</list>
+    	</property>
+    </bean> 
+    
+    <bean id="project4" class="com.jsp.springcore.employee_project.entity.Project" autowire="no">
+    	<property name="projectId" value="4"></property>
+    	<property name="projectName" value="Ola"></property>
+    	<property name="techStack" value="DOTNET"></property>
+    	
+    	<property name="employees">
+    		<list>
+    			<ref bean="employee1"/>
+    			<ref bean="employee2"/>
+    		</list>
+    	</property>
+    </bean> 
+    
+  
+    
+  
+    
+</beans>
